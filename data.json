@@ -1,0 +1,47 @@
+{
+    "model":
+        [
+                {
+                     "id": 0,
+                     "imgSrc": "https://www.linux.org.ru/images/20724/original.jpg",
+                     "descr": "first"
+                 }, {
+                     "id": 1,
+                     "imgSrc": "https://www.linux.org.ru/images/20725/original.png",
+                     "descr": "second"
+                 }, {
+                     "id": 2,
+                     "imgSrc": "https://www.linux.org.ru/images/20709/original.png",
+                     "descr": "third"
+                 }, {
+                     "id": 3,
+                     "imgSrc": "https://www.linux.org.ru/images/20726/original.png",
+                     "descr": "fourth"
+                 }, {
+                     "id": 4,
+                     "imgSrc": "https://www.linux.org.ru/images/20713/original.png",
+                     "descr": "fifth"
+                 }, {
+                     "id": 5,
+                     "imgSrc": "https://www.linux.org.ru/images/20718/original.png",
+                     "descr": "sixth"
+                 }, {
+                     "id": 6,
+                     "imgSrc": "https://www.linux.org.ru/images/20723/original.png",
+                     "descr": "seventh"
+                 }, {
+                     "id": 7,
+                     "imgSrc": "https://www.linux.org.ru/images/20715/original.jpg",
+                     "descr": "eigth"
+                 }, {
+                     "id": 8,
+                     "imgSrc": "https://www.linux.org.ru/images/20708/original.png",
+                     "descr": "nineth"
+                 }, {
+                     "id": 9,
+                     "imgSrc": "https://www.linux.org.ru/images/20703/original.png",
+                     "descr": "tenth"
+                 }
+         ],
+    "result": true
+}
