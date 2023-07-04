@@ -4,6 +4,8 @@ project(ImageKeeper VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_AUTORCC ON)
+
 set(APP_NAME appImageKeeper)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
@@ -11,6 +13,7 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 qt_standard_project_setup()
 
 qt_add_executable(${APP_NAME}
+    res/res.qrc
     main.cpp
     datamanager.cpp
     datamanager.h

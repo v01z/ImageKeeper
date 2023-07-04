@@ -69,7 +69,7 @@ Window {
             gradient: Gradient {
                 GradientStop {
                     position: 0
-                    color: "gray"
+                    color: "grey"
                 }
                 GradientStop {
                     position: 0.7
@@ -77,10 +77,23 @@ Window {
                 }
             }
             Text {
-                anchors.centerIn: parent
-                color: "gray"
+                anchors.left: parent.left
+                anchors.leftMargin: 10
+                color: "grey"
                 text: "ImageKeeper"
                 font.bold: true
+            }
+            Image {
+                id: addItemImage
+                anchors.right: parent.right
+                anchors.rightMargin: 10
+                source: "qrc:/add.png"
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        console.log("clicked")
+                    }
+                }
             }
         }
 
