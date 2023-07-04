@@ -2,18 +2,20 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
+    //anchors.centerIn: parent
     Column{
-        anchors.fill: parent
-        padding: 10
+        //anchors.fill: parent
+        //padding: 10
         TextField{
             id: shortDescriptionTextField
             text: ""
-            placeholderText: qsTr("Краткое описание")
+            placeholderText: "Краткое описание"
         }
         ImgChooser{
             id: mainImgChooser
         }
 
+        /*
         TextField{
             id: fullDescriptionTextEdit
             text: ""
@@ -41,11 +43,12 @@ Item {
             id: fourthExtraImgChooser
             visible: thirdExtraImgChooser.is_filled
         }
+        */
 
         Row{
             Button{
                 id: okBtn
-                text: qStr("OK")
+                text: "OK"
                 enabled: {
                     if(shortDescriptionTextField.text === "")
                         return false
@@ -55,14 +58,18 @@ Item {
                 }
 
                 onClicked: {
-                    //
+                    // change json-file and:
+                    mainImgChooser.visible = false
+                    gridView.visible = true
                 }
             }
             Button{
                 id: cancelBtn
-                text: qStr("Отмена")
+                text: "Отмена"
                 onClicked: {
                    //
+                    newItemSpace.visible = false
+                    gridView.visible = true
                 }
             }
         }

@@ -57,6 +57,7 @@ Window {
             }
         }
     }
+
     GridView {
         id: gridView
         cellHeight: 120
@@ -93,6 +94,10 @@ Window {
                     onClicked: {
                         console.log("clicked")
 
+                        gridView.visible = false
+                        newItemSpace.visible = true
+                        newItemSpace.stateVisible = true
+
                         jsonData.parse("./data.json")
                         gridView.model = jsonData.data
                     }
@@ -120,5 +125,35 @@ Window {
         }
         anchors.fill: parent
         delegate: delegate
+    }
+
+    NewItemSpace{
+        id: newItemSpace
+        anchors.centerIn: parent
+        //anchors.fill: parent
+        visible: false
+        property bool stateVisible: false
+        states: [
+            State {
+                when: newItemSpace.stateVisible
+                PropertyChanges {
+                    target: newItemSpace
+                    opacity: 1.0
+                }
+            },
+            State {
+                when: !newItemSpace.stateVisible
+                PropertyChanges {
+                    target: newItemSpace
+                    opacity: 0.0
+                }
+            }
+        ]
+        transitions: Transition {
+            NumberAnimation {
+                property: "opacity"
+                duration: 500
+            }
+        }
     }
 }

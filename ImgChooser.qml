@@ -12,18 +12,17 @@ Item {
     }
 
     Row {
-        anchors.fill: parent
+        //anchors.fill: parent
         spacing: 10
         TextField {
             id: imgTextField
             text: ""
-            placeholderText: qStr("Путь к файлу или URL")
+            placeholderText: "Путь к файлу или URL"
         }
         Button {
             id: imgPathBtn
             text: "..."
             onClicked: {
-
                 //open file choose dialog
             }
         }
