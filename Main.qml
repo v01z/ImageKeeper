@@ -48,6 +48,13 @@ Window {
                     text: modelData.descr
                 }
             }
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    console.log(modelData.id)
+                   gridView.currentIndex = index //highlight
+                }
+            }
         }
     }
     GridView {
