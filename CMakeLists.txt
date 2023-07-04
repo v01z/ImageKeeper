@@ -22,7 +22,7 @@ qt_add_executable(${APP_NAME}
 qt_add_qml_module(${APP_NAME}
     URI ImageKeeper
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES Main.qml NewItemSpace.qml ImgChooser.qml
 )
 
 set_target_properties(${APP_NAME} PROPERTIES

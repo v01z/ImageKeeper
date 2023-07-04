@@ -48,11 +48,11 @@ Window {
                     text: modelData.descr
                 }
             }
-            MouseArea{
+            MouseArea {
                 anchors.fill: parent
                 onClicked: {
                     console.log(modelData.id)
-                   gridView.currentIndex = index //highlight
+                    gridView.currentIndex = index //highlight
                 }
             }
         }
@@ -88,10 +88,13 @@ Window {
                 anchors.right: parent.right
                 anchors.rightMargin: 10
                 source: "qrc:/add.png"
-                MouseArea{
+                MouseArea {
                     anchors.fill: parent
                     onClicked: {
                         console.log("clicked")
+
+                        jsonData.parse("./data.json")
+                        gridView.model = jsonData.data
                     }
                 }
             }
