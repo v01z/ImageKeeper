@@ -5,7 +5,7 @@ Item {
     id: mainItem
     property string img_path_text: imgTextField.text
     property bool is_filled: {
-        if(imgTextField.text === "")
+        if (imgTextField.text === "")
             return false
         else
             return true
@@ -13,17 +13,22 @@ Item {
 
     Row {
         //anchors.fill: parent
+        //anchors.horizontalCenter: parent.horizontalCenter
         spacing: 10
         TextField {
             id: imgTextField
             text: ""
             placeholderText: "Путь к файлу или URL"
+            //width: 240
         }
         Button {
             id: imgPathBtn
             text: "..."
             onClicked: {
+
                 //open file choose dialog
+                //console.log(shortDescriptionTextField.top)
+                //console.log(mainImgChooser.top)
             }
         }
     }

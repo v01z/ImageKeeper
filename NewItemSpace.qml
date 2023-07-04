@@ -3,17 +3,24 @@ import QtQuick.Controls 2.15
 
 Item {
     //anchors.centerIn: parent
-    Column{
+    Column {
         //anchors.fill: parent
-        //padding: 10
-        TextField{
+        //anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        //anchors.topMargin: parent.top
+        //padding: 50
+        //spacing: 10
+        TextField {
             id: shortDescriptionTextField
+            //anchors.topMargin: parent.top + 10
             text: ""
             placeholderText: "Краткое описание"
         }
-        ImgChooser{
+        ImgChooser {
             id: mainImgChooser
+            //anchors.top: shortDescriptionTextField.bottom
         }
+
 
         /*
         TextField{
@@ -44,13 +51,14 @@ Item {
             visible: thirdExtraImgChooser.is_filled
         }
         */
-
-        Row{
-            Button{
+        Row {
+            //anchors.top: mainImgChooser.bottom
+            Button {
                 id: okBtn
                 text: "OK"
+                //anchors.top: mainImgChooser.bottom
                 enabled: {
-                    if(shortDescriptionTextField.text === "")
+                    if (shortDescriptionTextField.text === "")
                         return false
                     if (mainImgChooser.is_filled === false)
                         return false
@@ -59,20 +67,18 @@ Item {
 
                 onClicked: {
                     // change json-file and:
-                    mainImgChooser.visible = false
+                    newItemSpace.visible = false
                     gridView.visible = true
                 }
             }
-            Button{
+            Button {
                 id: cancelBtn
                 text: "Отмена"
                 onClicked: {
-                   //
                     newItemSpace.visible = false
                     gridView.visible = true
                 }
             }
         }
     }
-
 }

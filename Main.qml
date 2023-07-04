@@ -5,7 +5,8 @@ import ru.barsestate 1.0
 Window {
     width: 640
     height: 480
-    color: "red"
+    //color: "red"
+    color: "grey"
     visible: true
 
     JsonData {
@@ -127,10 +128,14 @@ Window {
         delegate: delegate
     }
 
-    NewItemSpace{
+    NewItemSpace {
         id: newItemSpace
-        anchors.centerIn: parent
+        //anchors.centerIn: parent
+        //anchors.horizontalCenter: parent.
         //anchors.fill: parent
+        width: parent.width
+        //height: parent.height
+        //anchors.topMargin: parent.
         visible: false
         property bool stateVisible: false
         states: [
