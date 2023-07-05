@@ -132,8 +132,8 @@ Window {
         id: newItemSpace
         //anchors.centerIn: parent
         //anchors.horizontalCenter: parent.
-        //anchors.fill: parent
-        width: parent.width
+        anchors.fill: parent
+        //width: parent.width
         //height: parent.height
         //anchors.topMargin: parent.
         visible: false

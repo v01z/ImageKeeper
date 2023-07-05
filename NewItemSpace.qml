@@ -2,16 +2,26 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-    //anchors.centerIn: parent
+    anchors.centerIn: parent
     Column {
         anchors.horizontalCenter: parent.horizontalCenter
+        //anchors.fill: parent
         spacing: 10
 
+
+        /*
         TextField {
             id: shortDescriptionTextField
             //anchors.topMargin: parent.top + 10
-            text: ""
+            //text: ""
+            //debug
+            text: "test short descr"
+            color: "white"
             placeholderText: "Краткое описание"
+        }
+        */
+        Button {
+            text: "afaf"
         }
 
         ImgChooser {
@@ -19,15 +29,17 @@ Item {
             //anchors.top: shortDescriptionTextField.bottom
         }
 
-
-        /*
-        TextField{
+        // /*
+        TextField {
             id: fullDescriptionTextEdit
             text: ""
             placeholderText: qsTr("Расширенное описание")
         }
-        ImgChooser{
+        ImgChooser {
             id: firstExtraImgChooser
+
+
+            /*
             visible: {
                 if(shortDescriptionTextField.text === "" ||
                         mainImgChooser.is_filled === false)
@@ -35,20 +47,21 @@ Item {
                 else
                     return true
             }
+            */
         }
-        ImgChooser{
+        ImgChooser {
             id: secondExtraImgChooser
-            visible: firstExtraImgChooser.is_filled
+            //visible: firstExtraImgChooser.is_filled
         }
-        ImgChooser{
+        ImgChooser {
             id: thirdExtraImgChooser
-            visible: secondExtraImgChooser.is_filled
+            //visible: secondExtraImgChooser.is_filled
         }
-        ImgChooser{
+        ImgChooser {
             id: fourthExtraImgChooser
-            visible: thirdExtraImgChooser.is_filled
+            //visible: thirdExtraImgChooser.is_filled
         }
-        */
+        //*/
         Row {
             spacing: 10
             Button {
