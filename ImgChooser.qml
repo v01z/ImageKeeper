@@ -12,8 +12,6 @@ Item {
     }
 
     Row {
-        //anchors.fill: parent
-        //anchors.horizontalCenter: parent.horizontalCenter
         spacing: 10
         TextField {
             id: imgTextField

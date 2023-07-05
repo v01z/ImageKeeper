@@ -4,18 +4,16 @@ import QtQuick.Controls 2.15
 Item {
     //anchors.centerIn: parent
     Column {
-        //anchors.fill: parent
-        //anchors.centerIn: parent
         anchors.horizontalCenter: parent.horizontalCenter
-        //anchors.topMargin: parent.top
-        //padding: 50
-        //spacing: 10
+        spacing: 10
+
         TextField {
             id: shortDescriptionTextField
             //anchors.topMargin: parent.top + 10
             text: ""
             placeholderText: "Краткое описание"
         }
+
         ImgChooser {
             id: mainImgChooser
             //anchors.top: shortDescriptionTextField.bottom
@@ -52,7 +50,7 @@ Item {
         }
         */
         Row {
-            //anchors.top: mainImgChooser.bottom
+            spacing: 10
             Button {
                 id: okBtn
                 text: "OK"
