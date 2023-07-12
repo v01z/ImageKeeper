@@ -19,6 +19,7 @@ Window {
 
             gridView.model = jsonData.data
 
+            //debug prps
             for (var i = 0; i < jsonData.length; i++) {
                 var obj = jsonData.data[i]
                 console.log("ID : " + obj.id)
@@ -97,7 +98,6 @@ Window {
 
                         gridView.visible = false
                         newItemSpace.visible = true
-                        newItemSpace.stateVisible = true
 
                         jsonData.parse("./data.json")
                         gridView.model = jsonData.data
@@ -130,24 +130,18 @@ Window {
 
     NewItemSpace {
         id: newItemSpace
-        //anchors.centerIn: parent
-        //anchors.horizontalCenter: parent.
         anchors.fill: parent
-        //width: parent.width
-        //height: parent.height
-        //anchors.topMargin: parent.
         visible: false
-        property bool stateVisible: false
         states: [
             State {
-                when: newItemSpace.stateVisible
+                when: newItemSpace.visible === true
                 PropertyChanges {
                     target: newItemSpace
                     opacity: 1.0
                 }
             },
             State {
-                when: !newItemSpace.stateVisible
+                when: newItemSpace.visible === false
                 PropertyChanges {
                     target: newItemSpace
                     opacity: 0.0
