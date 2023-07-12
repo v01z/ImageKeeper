@@ -16,7 +16,7 @@ public:
   DataManager();
 
   // returns a list of items
-  QVariantList data() const;
+  const QVariantList &data() const;
 
   // function returns final result by status value
   bool result() const;
@@ -24,13 +24,18 @@ public:
   // function returns total item count
   int length() const;
 
-  // checks file path.
-  // path is string of current file path.
-  bool fileExists(QString path);
-
   // function gets json file from user to convert.
   // path is string of current file path.
-  Q_INVOKABLE void parse(QString path);
+  // Q_INVOKABLE void parse(const QString &path);
+  Q_INVOKABLE void parse();
+
+  // adding one item
+  Q_INVOKABLE void addItem(const QString &mainImgSrc, const QString &shortDescr,
+                           const QString &fullDescr,
+                           const QString &firstExtraImgSrc,
+                           const QString &secondExtraImgSrc,
+                           const QString &thirdExtraImgSrc,
+                           const QString &fourthExtraImgSrc);
 
 public slots:
   void setData(const QVariantList &data);
@@ -43,9 +48,14 @@ signals:
   void lengthChanged(int length);
 
 private:
+  QString m_jsonPath;
   QVariantList m_data;
   bool m_result = {false};
   int m_length = {0};
+
+  // checks file path.
+  // path is string of current file path.
+  bool fileExists(const QString &path);
 };
 } // namespace JSONIC
 

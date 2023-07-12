@@ -14,7 +14,7 @@ Window {
     }
 
     Component.onCompleted: {
-        jsonData.parse("./data.json")
+        jsonData.parse()
         if (jsonData.result) {
 
             gridView.model = jsonData.data
@@ -23,8 +23,8 @@ Window {
             for (var i = 0; i < jsonData.length; i++) {
                 var obj = jsonData.data[i]
                 console.log("ID : " + obj.id)
-                console.log("Image source: " + obj.imgSrc)
-                console.log("Description: " + obj.descr)
+                console.log("Image source: " + obj.img_src)
+                console.log("Description: " + obj.short_descr)
             }
         } else {
             console.warn("Any data has not found by enable status!")
@@ -42,12 +42,12 @@ Window {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: 64
                     height: 64
-                    source: modelData.imgSrc
+                    source: modelData.img_src
                     smooth: true
                 }
                 Text {
                     color: "white"
-                    text: modelData.descr
+                    text: modelData.short_descr
                 }
             }
             MouseArea {
@@ -99,7 +99,8 @@ Window {
                         gridView.visible = false
                         newItemSpace.visible = true
 
-                        jsonData.parse("./data.json")
+                        //jsonData.parse("./data.json")
+                        jsonData.parse()
                         gridView.model = jsonData.data
                     }
                 }

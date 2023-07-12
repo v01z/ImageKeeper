@@ -3,44 +3,111 @@
         [
                 {
                      "id": 0,
-                     "imgSrc": "https://www.linux.org.ru/images/20724/original.jpg",
-                     "descr": "first"
+                     "img_src": "https://www.linux.org.ru/images/20724/original.jpg",
+                     "short_descr": "first",
+                     "full_descr": "This is the first one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
                  }, {
                      "id": 1,
-                     "imgSrc": "https://www.linux.org.ru/images/20725/original.png",
-                     "descr": "second"
+                     "img_src": "https://www.linux.org.ru/images/20725/original.png",
+                     "short_descr": "second",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 2,
-                     "imgSrc": "https://www.linux.org.ru/images/20709/original.png",
-                     "descr": "third"
+                     "img_src": "https://www.linux.org.ru/images/20709/original.png",
+                     "short_descr": "third",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 3,
-                     "imgSrc": "https://www.linux.org.ru/images/20726/original.png",
-                     "descr": "fourth"
+                     "img_src": "https://www.linux.org.ru/images/20726/original.png",
+                     "short_descr": "fourth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 4,
-                     "imgSrc": "https://www.linux.org.ru/images/20713/original.png",
-                     "descr": "fifth"
+                     "img_src": "https://www.linux.org.ru/images/20713/original.png",
+                     "short_descr": "fifth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 5,
-                     "imgSrc": "https://www.linux.org.ru/images/20718/original.png",
-                     "descr": "sixth"
+                     "img_src": "https://www.linux.org.ru/images/20718/original.png",
+                     "short_descr": "sixth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 6,
-                     "imgSrc": "https://www.linux.org.ru/images/20723/original.png",
-                     "descr": "seventh"
+                     "img_src": "https://www.linux.org.ru/images/20723/original.png",
+                     "short_descr": "seventh",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 7,
-                     "imgSrc": "https://www.linux.org.ru/images/20715/original.jpg",
-                     "descr": "eigth"
+                     "img_src": "https://www.linux.org.ru/images/20715/original.jpg",
+                     "short_descr": "eigth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 8,
-                     "imgSrc": "https://www.linux.org.ru/images/20708/original.png",
-                     "descr": "nineth"
+                     "img_src": "https://www.linux.org.ru/images/20708/original.png",
+                     "short_descr": "nineth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
+
+
                  }, {
                      "id": 9,
-                     "imgSrc": "https://www.linux.org.ru/images/20703/original.png",
-                     "descr": "tenth"
+                     "img_src": "https://www.linux.org.ru/images/20703/original.png",
+                     "short_descr": "tenth",
+                     "full_descr": "This is the second one",
+                     "first_extra_img_src": "",
+                     "second_extra_img_src": "",
+                     "third_extra_img_src": "",
+                     "fourth_extra_img_src": ""
                  }
          ],
     "result": true

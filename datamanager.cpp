@@ -7,9 +7,11 @@
 
 using namespace JSONIC;
 
-DataManager::DataManager() {}
+DataManager::DataManager() {
+  m_jsonPath = "./data.json"; // find out the right place
+}
 
-bool DataManager::fileExists(QString path) {
+bool DataManager::fileExists(const QString &path) {
   QFileInfo check_file(path);
   // check if file exists and if yes, Is it really a file!
   if (check_file.exists() && check_file.isFile()) {
@@ -19,7 +21,7 @@ bool DataManager::fileExists(QString path) {
   }
 }
 
-QVariantList DataManager::data() const { return m_data; }
+const QVariantList &DataManager::data() const { return m_data; }
 
 void DataManager::setData(const QVariantList &data) {
   if (m_data == data)
@@ -47,18 +49,18 @@ void DataManager::setResult(bool result) {
   emit resultChanged(m_result);
 }
 
-void DataManager::parse(QString path) {
+void DataManager::parse() {
 
   QString rawData;
   QVariantMap modelData;
   QVariantList finalJson;
 
   QFile file;
-  QDir dir(".");
+  // QDir dir(".");
 
-  if (fileExists(path)) {
+  if (fileExists(m_jsonPath)) {
     {
-      file.setFileName(path);
+      file.setFileName(m_jsonPath);
       file.open(QIODevice::ReadOnly | QIODevice::Text);
 
       // Load data from json file:
@@ -84,8 +86,17 @@ void DataManager::parse(QString path) {
         QJsonObject modelObject = value.toObject();
 
         modelData.insert("id", modelObject["id"].toInt());
-        modelData.insert("imgSrc", modelObject["imgSrc"].toString());
-        modelData.insert("descr", modelObject["descr"].toString());
+        modelData.insert("img_src", modelObject["img_src"].toString());
+        modelData.insert("short_descr", modelObject["short_descr"].toString());
+        modelData.insert("full_descr", modelObject["full_descr"].toString());
+        modelData.insert("first_extra_img_src",
+                         modelObject["first_extra_img_src"].toString());
+        modelData.insert("second_extra_img_src",
+                         modelObject["second_extra_img_src"].toString());
+        modelData.insert("third_extra_img_src",
+                         modelObject["third_extra_img_src"].toString());
+        modelData.insert("fourth_extra_img_src",
+                         modelObject["fourth_extra_img_src"].toString());
 
         // Set model data
         finalJson.append(modelData);
@@ -102,3 +113,10 @@ void DataManager::parse(QString path) {
     qWarning() << "There is no any file in this path!";
   }
 }
+
+void DataManager::addItem(const QString &mainImgSrc, const QString &shortDescr,
+                          const QString &fullDescr,
+                          const QString &firstExtraImgSrc,
+                          const QString &secondExtraImgSrc,
+                          const QString &thirdExtraImgSrc,
+                          const QString &fourthExtraImgSrc) {}

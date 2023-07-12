@@ -21,10 +21,9 @@ Item {
             id: fullDescriptionTextEdit
             text: ""
             placeholderText: qsTr("Расширенное описание")
-            width: 180
+            width: 170
             wrapMode: TextInput.Wrap
             maximumLength: 170 // 7-8 lines
-
 
             visible: {
                 if (shortDescriptionTextField.text === ""
@@ -78,6 +77,15 @@ Item {
                     // change json-file and:
                     newItemSpace.visible = false
                     gridView.visible = true
+
+                    //debug
+                    console.log(shortDescriptionTextField.text)
+                    console.log(mainImgChooser.img_path_text)
+                    console.log(fullDescriptionTextEdit.text)
+                    console.log(firstExtraImgChooser.img_path_text)
+                    console.log(secondExtraImgChooser.img_path_text)
+                    console.log(thirdExtraImgChooser.img_path_text)
+                    console.log(fourthExtraImgChooser.img_path_text)
                 }
             }
             Button {
@@ -86,9 +94,6 @@ Item {
                 onClicked: {
                     newItemSpace.visible = false
                     gridView.visible = true
-
-                    //debug
-                    console.log(fullDescriptionTextEdit.text.length)
                 }
             }
         }
