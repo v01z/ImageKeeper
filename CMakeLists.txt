@@ -37,11 +37,13 @@ target_link_libraries(${APP_NAME}
     PRIVATE Qt6::Quick
 )
 
+#[[
 add_custom_command(
         TARGET ${APP_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         ${CMAKE_CURRENT_SOURCE_DIR}/data.json
         ${CMAKE_CURRENT_BINARY_DIR})
+    #]]
 
 install(TARGETS ${APP_NAME}
     BUNDLE DESTINATION .

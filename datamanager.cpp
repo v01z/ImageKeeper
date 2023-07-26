@@ -1,14 +1,29 @@
 #include "datamanager.h"
 #include <QDir>
 #include <QFileInfo>
+#include <QGuiApplication> //
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QStandardPaths>
 
 using namespace JSONIC;
 
 DataManager::DataManager() {
-  m_jsonPath = "./data.json"; // find out the right place
+
+  m_jsonPath =
+      QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+
+  if (!QFile::exists(m_jsonPath)) {
+    if (!QDir().mkdir(m_jsonPath)) {
+      qInfo() << "Cannot create folder: " << m_jsonPath;
+      return;
+    }
+  }
+
+  m_jsonPath += "/data.json";
+  qDebug() << "^^^^^^^^^^^^^^^ json path: " << m_jsonPath
+           << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
 }
 
 bool DataManager::fileExists(const QString &path) {
@@ -56,7 +71,6 @@ void DataManager::parse() {
   QVariantList finalJson;
 
   QFile file;
-  // QDir dir(".");
 
   if (fileExists(m_jsonPath)) {
     {

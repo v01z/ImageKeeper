@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import ru.barsestate 1.0
 
-//Rectangle {
 Window {
     width: 640
     height: 480
