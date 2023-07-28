@@ -1,4 +1,3 @@
-#include "datamanager.h"
 #include <QDir>
 #include <QFileInfo>
 #include <QGuiApplication> //
@@ -6,6 +5,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QStandardPaths>
+#include <include/datamanager.h>
 
 using namespace JSONIC;
 

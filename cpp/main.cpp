@@ -1,9 +1,9 @@
-#include "datamanager.h"
 #include <QDir> //
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QStandardPaths> //
+#include <include/datamanager.h>
 
 int main(int argc, char *argv[]) {
   QGuiApplication app(argc, argv);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 
   // end debug
 
-  const QUrl url(u"qrc:/ImageKeeper/Main.qml"_qs);
+  const QUrl url(u"qrc:/ImageKeeper/qml/Main.qml"_qs);
   QObject::connect(
       &engine, &QQmlApplicationEngine::objectCreationFailed, &app,
       []() { QCoreApplication::exit(-1); }, Qt::QueuedConnection);
